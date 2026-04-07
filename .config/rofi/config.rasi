@@ -1,3 +1,7 @@
+########################
+## ROFI Configuration ##
+########################
+
 configuration {
         modi:                                       "drun";
 	    show-icons:                                 true;
