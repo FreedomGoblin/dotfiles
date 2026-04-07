@@ -1,0 +1,11 @@
+# settings
+
+(GimpGegl-gegl-noise-cie-lch-config "2026-03-14 13:26:10"
+    (time 1773494770)
+    (holdness 4)
+    (lightness-distance 30.379999999999999)
+    (chroma-distance 17.07)
+    (hue-distance 18.489999999999998)
+    (seed 0))
+
+# end of settings

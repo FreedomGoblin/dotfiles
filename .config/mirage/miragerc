@@ -1,0 +1,73 @@
+[window]
+w = 1908
+h = 1068
+toolbar = False
+statusbar = False
+thumbpane = False
+
+[prefs]
+simple-bgcolor = False
+bgcolor-red = 0
+bgcolor-green = 0
+bgcolor-blue = 0
+open_all = True
+hidden = False
+use_last_dir = True
+last_dir = /home/peter
+fixed_dir = /home/peter
+open_mode = 0
+last_mode = 0
+listwrap_mode = 0
+slideshow_delay = 1
+slideshow_random = False
+zoomquality = 2
+quality_save = 90
+disable_screensaver = False
+slideshow_in_fullscreen = False
+confirm_delete = True
+preloading_images = True
+savemode = 2
+start_in_fullscreen = False
+thumbsize = 128
+screenshot_delay = 2
+
+[actions]
+num_actions = 4
+names[0] = Open in GIMP
+commands[0] = gimp %F &
+shortcuts[0] = <Control>e
+batch[0] = False
+names[1] = Create Thumbnail
+commands[1] = convert %F -thumbnail 150x150 %Pt_%N.jpg
+shortcuts[1] = <Alt>t
+batch[1] = False
+names[2] = Create Thumbnails
+commands[2] = convert %F -thumbnail 150x150 %Pt_%N.jpg
+shortcuts[2] = <Control><Alt>t
+batch[2] = True
+names[3] = Move to Favorites
+commands[3] = mkdir -p ~/mirage-favs; mv %F ~/mirage-favs; [NEXT]
+shortcuts[3] = <Control><Alt>f
+batch[3] = False
+
+[recent]
+num_recent = 9
+num[0] = 157
+urls[0,0] = /home/peter/Downloads/Screenshot 2026-03-21 at 20-33-04 The_Simpsons_Ride_at_Universal_Studios_Florida.jpg (JPEG Image 4608 × 3456 pixels) — Scaled (29%).png
+num[1] = 36
+urls[1,0] = /home/peter/Pictures/solarflare.webp
+num[2] = 51
+urls[2,0] = /home/peter/Downloads/41531066445-b9ebc4aca4-o1.jpg
+num[3] = 51
+urls[3,0] = /home/peter/Pictures/2026-03-14-023139_hyprshot.png
+num[4] = 50
+urls[4,0] = /home/peter/Pictures/wallpapers/ey4drxswicfg1.jpeg
+num[5] = 49
+urls[5,0] = /home/peter/Pictures/wallpapers/aa6k459m1pjg1.png
+num[6] = 59
+urls[6,0] = /usr/share/sddm/themes/Sugar-Candy/Backgrounds/Mountain.jpg
+num[7] = 57
+urls[7,0] = /usr/share/sddm/themes/Sugar-Candy/Backgrounds/Undraw.svg
+num[8] = 40
+urls[8,0] = /home/peter/Pictures/wallpapers/ufo.jpeg
+

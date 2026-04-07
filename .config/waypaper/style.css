@@ -1,0 +1,7 @@
+/* pywal colors */
+@import '/home/peter/.cache/wal/color-waypaper.css';
+@define-color bg @background-color;
+
+window {
+    background-color: @bg;
+}

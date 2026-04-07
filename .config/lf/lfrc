@@ -1,0 +1,104 @@
+####################
+## Basic Settings ##
+####################
+
+set previewer ~/.config/lf/preview/preview
+set hidden true
+set icons true
+set ignorecase true
+set shellopts '-eu'
+set ifs "\n"
+
+######################
+## Custom Functions ##
+######################
+
+# opener
+cmd open ${{
+	case $(file --mime-type "$f" -bL) in
+		text/*|application.json) $EDITOR "$f";;
+		application/x-ececutable) "$F";;
+		*) xdg-open "$f" ;;
+	esac
+}}
+
+# Make Directory
+cmd mkdir ${{
+	printf "Directory Name: "
+	read ans
+	mkdir $ans
+}}
+
+# Sudo Make Directory
+cmd sudomkdir ${{
+    printf "Directory Name: "
+    read ans
+    sudo mkdir $ans
+  }}
+
+# Make File
+cmd mkfile ${{
+	printf "File Name: "
+	read ans
+	touch $ans
+}}
+
+# Sudo Make File
+cmd sudomkfile ${{
+    printf "File Name: "
+    read ans
+    sudo touch $ans
+  }}
+
+# Compression
+# with tar
+cmd tar ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    tar czf $1.tar.gz $1
+    rm -rf $1
+}}
+
+# with zip
+cmd zip ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    zip -r $1.zip $1
+    rm -rf $1
+}}
+
+# Extraction
+cmd extract ${{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+# Properties
+cmd chmod ${{
+    printf "mode: "
+    read ans
+
+    for file in "$fx"
+    do
+      chmod "ans $file"
+    done
+
+    lf -remote 'send reload'
+}}
+
+# Deletion
+cmd trash  ${{
+    trash-put "$f"
+  }}
+
+
+
