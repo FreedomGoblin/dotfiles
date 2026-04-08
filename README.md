@@ -1,1 +1,1 @@
-My current working Hyprland dotfiles. Still not perfect so there may be issues. 
+My current working Hyprland dotfiles. Purely for backup purposes. 
