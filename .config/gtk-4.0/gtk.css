@@ -1,5 +1,8 @@
-@import '/home/peter/.cache/wal/colors.css';
+//#############\\
+//## GTK 4.0 ##\\
+//#############\\
 
+@import '/home/peter/.cache/wal/colors.css';
 
 @define-color accent_color @color1;
 @define-color accent_bg_color @color9;

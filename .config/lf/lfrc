@@ -1,6 +1,6 @@
-####################
-## Basic Settings ##
-####################
+#######################
+## LF Basic Settings ##
+#######################
 
 set previewer ~/.config/lf/preview/preview
 set hidden true
@@ -16,8 +16,11 @@ set ifs "\n"
 # opener
 cmd open ${{
 	case $(file --mime-type "$f" -bL) in
-		text/*|application.json) $EDITOR "$f";;
-		application/x-ececutable) "$F";;
+    text/*) nvim "$f";;
+    application/epub+zip) bookokrat "$f";;
+    application/pdf) bookokrat "$f";;
+    application/json) nvim "$f";;
+    video/*) mpv "$f";;
 		*) xdg-open "$f" ;;
 	esac
 }}
